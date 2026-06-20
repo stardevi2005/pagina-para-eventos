@@ -745,6 +745,36 @@ p {
     transform: translateY(0);
 }
 
+/* Action button for Drive download */
+.btn-drive-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--soft-rose);
+    color: var(--deep-burgundy);
+    padding: 0.7rem 1.4rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 12px rgba(255, 143, 163, 0.05);
+    margin-top: 1rem;
+}
+
+.btn-drive-action:hover {
+    background: var(--gradient-btn);
+    color: var(--pure-white);
+    border-color: transparent;
+    box-shadow: 0 6px 18px rgba(255, 143, 163, 0.25);
+    transform: translateY(-2px);
+}
+
+.card-action-btn {
+    margin-top: 1.2rem;
+}
+
 /* ==========================================
    MEDIA QUERIES (RESPONSIVENESS)
    ========================================== */
@@ -800,6 +830,10 @@ p {
     .meta-info {
         flex-direction: column;
         gap: 0.5rem;
+    }
+    .video-wrapper {
+        padding-bottom: 0 !important;
+        height: 270px !important;
     }
     .theater-footer {
         flex-direction: column;
