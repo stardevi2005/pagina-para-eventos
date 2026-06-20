@@ -1,0 +1,293 @@
+/* ==========================================
+   ROOT STYLES - MAIN CLIENT HUB
+   ========================================== */
+:root {
+    --bg-dark: #121212;
+    --bg-card: #1e1e1e;
+    --gold: #d4af37;
+    --gold-light: #f3e5ab;
+    --text-white: #ffffff;
+    --text-grey: #a0a0a0;
+    --border-color: rgba(212, 175, 55, 0.2);
+    
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Base resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    font-family: var(--font-body);
+    color: var(--text-white);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 4rem 1rem 2rem 1rem;
+}
+
+.header .logo {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: var(--text-white);
+}
+
+.header .logo span {
+    color: var(--gold);
+    font-weight: 300;
+}
+
+.header .subtitle {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: var(--gold);
+    margin-top: 0.5rem;
+}
+
+/* Main Hub */
+.main-hub {
+    flex: 1;
+    padding: 3rem 0 6rem 0;
+}
+
+.hub-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.hub-subtitle {
+    text-align: center;
+    color: var(--text-grey);
+    max-width: 600px;
+    margin: 0 auto 4rem auto;
+    font-size: 1.1rem;
+}
+
+/* Grid Layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    justify-content: center;
+}
+
+/* Client Card base */
+.client-card {
+    background-color: var(--bg-card);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 400px;
+    padding: 2.5rem;
+}
+
+.client-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.15);
+}
+
+/* Quinceañera Card specific styling */
+.card-quinceanera {
+    /* Set a nice overlay with subtle pastel tones */
+    background: linear-gradient(135deg, #ffe5ec 0%, #ffccd5 100%);
+    color: #4a2831;
+    border-color: rgba(255, 143, 163, 0.2);
+}
+
+.card-quinceanera:hover {
+    border-color: #ff8fa3;
+    box-shadow: 0 12px 35px rgba(255, 143, 163, 0.25);
+}
+
+.card-quinceanera .card-tag {
+    background: rgba(255, 143, 163, 0.25);
+    color: #ff4d6d;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: fit-content;
+    margin-bottom: 1.5rem;
+}
+
+.card-quinceanera h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.card-quinceanera .card-date {
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.7;
+    margin-bottom: 1.2rem;
+}
+
+.card-quinceanera .card-desc {
+    color: #6e414c;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+.card-quinceanera .card-btn {
+    background: #ff8fa3;
+    color: var(--text-white);
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    width: fit-content;
+    box-shadow: 0 4px 12px rgba(255, 143, 163, 0.3);
+}
+
+.card-quinceanera .card-btn:hover {
+    background: #ff758f;
+    transform: translateX(5px);
+}
+
+/* Placeholder Card */
+.placeholder-card {
+    border: 1px dashed var(--border-color);
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem;
+}
+
+.placeholder-card .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-card .icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+}
+
+.placeholder-card h2 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text-white);
+}
+
+.placeholder-card .card-desc {
+    color: var(--text-grey);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    max-width: 250px;
+}
+
+.placeholder-card .card-status {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gold);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 4rem 1rem 3rem 1rem;
+    background: #0d0d0d;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.footer p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-white);
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: #25d366;
+    color: var(--text-white);
+    padding: 0.9rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.contact-btn:hover {
+    background: #20ba5a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.footer .copyright {
+    font-size: 0.8rem;
+    color: var(--text-grey);
+    margin-bottom: 0;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .hub-title {
+        font-size: 2.2rem;
+    }
+    .header {
+        padding: 2.5rem 1rem 1.5rem 1rem;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .client-card {
+        min-height: 350px;
+        padding: 2rem;
+    }
+}
